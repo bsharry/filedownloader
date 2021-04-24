@@ -2,14 +2,19 @@ import re
 import requests
 from clint.textui import progress
 import logging
+from urllib.parse import urlparse
 
 url = open('url.txt','r').read()
 
 res = requests.get(url, stream=True)
 total_length = int(res.headers.get('content-length'))
-d = res.headers['content-disposition']
-fname = re.findall("filename=(.+)", d)[0]
-
+if 'content-disposition' in res.headers:
+    d = res.headers['content-disposition']
+    fname = re.findall("filename=(.+)", d)[0]
+else:
+    a = urlparse(url)
+    fname = os.path.basename(a.path)
+    
 fpath = f'download/{fname}'
 
 with open("fpath", "wb") as file:
