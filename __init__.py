@@ -2,6 +2,7 @@ import re
 import requests
 from clint.textui import progress
 import logging
+import os
 from urllib.parse import urlparse
 
 url = open('url.txt','r').read()
