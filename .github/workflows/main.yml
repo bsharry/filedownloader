@@ -18,8 +18,7 @@ jobs:
         run: |
           python3 __init__.py
           ls
-          cd download
-          ls
+          pwd
       - uses: actions/upload-artifact@main
         with:
           name: download
