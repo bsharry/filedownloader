@@ -17,6 +17,9 @@ jobs:
       - name: start downloading the file
         run: |
           python3 __init__.py
+          ls
+          cd download
+          ls
       - uses: actions/upload-artifact@main
         with:
           name: download
