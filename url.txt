@@ -1,1 +1,1 @@
-https://www.python.org/ftp/python/3.8.1/python-3.8.1-macosx10.9.pkg
+https://go.microsoft.com/fwlink/p/?LinkID=869428&clcid=0x409&culture=en-us&country=US&lm=deeplink&lmsrc=groupChatMarketingPageWeb&cmpid=directDownloadMac
