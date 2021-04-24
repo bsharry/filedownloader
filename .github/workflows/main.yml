@@ -10,13 +10,13 @@ jobs:
       - name: install requirement
         run: |
           apt update
-	  apt install -y python3
-	  apt install -y python3-pip
-	  pip install -r requirements.txt
-	  mkdir download
+          apt install -y python3
+          apt install -y python3-pip
+          pip install -r requirements.txt
+          mkdir download
       - name: start downloading the file
-      	run: |
-	  python3 __init__.py
+        run: |
+          python3 __init__.py
       - uses: actions/upload-artifact@main
         with:
           name: download
